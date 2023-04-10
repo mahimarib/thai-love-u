@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reservations | ThaiLoveU</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <nav>
+            <div class="container">
+                <a class="logo" href="index.html"> ThaiLoveU </a>
+                <ul>
+                    <li class="nav-link"><a href="index.html">Home</a></li>
+                    <li class="nav-link"><a href="menu.html">Menu</a></li>
+                    <li class="nav-link active"><a href="#">Reservation</a></li>
+                    <li class="nav-link"><a href="#">About</a></li>
+                    <li><a class="button" href="#">Order</a></li>
+                    <li class="icon">
+                        <a href="#">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a href="#">
+                            <i class="fa fa-yelp" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="menu-button">
+                        <img src="assets/hamburger.svg" alt="menu icon" />
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <header id="reserve-header">
+            <img
+                src="assets/bright-restuarant.jpg"
+                alt="picture inside the restaurant"
+            />
+            <div class="container">
+                <h1>Reservations</h1>
+                <p>
+                    We take reservations up to a month in advance for parties of
+                    up to ten guests.
+                </p>
+            </div>
+        </header>
+        <section id="reserve-form">
+            <div class="container">
+                <h1>Reserve a Table</h1>
+                <form>
+                    <fieldset>
+                        <legend>Name *</legend>
+                        <label for="first-name">
+                            <input
+                                type="text"
+                                id="first-name"
+                                autocomplete="given-name"
+                            />
+                            First Name
+                        </label>
+                        <label for="last-name">
+                            <input
+                                type="text"
+                                id="last-name"
+                                autocomplete="family-name"
+                            />
+                            Last Name
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Email *</legend>
+                        <input type="email" autocomplete="email" />
+                    </fieldset>
+                    <fieldset>
+                        <legend>Phone Number *</legend>
+                        <input type="tel" autocomplete="tel" />
+                    </fieldset>
+                    <fieldset>
+                        <legend>Special Requests</legend>
+                        <textarea></textarea>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="col">
+                    <a href="#" class="logo">
+                        thailoveyou
+                        <i class="fa fa-heart" aria-hidden="true"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-facebook" aria-hidden="true">
+                                </i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-instagram" aria-hidden="true">
+                                </i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-yelp" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>location</h3>
+                    <address>116 W Houston St, New York, NY 10012</address>
+                </div>
+                <div class="col">
+                    <h3>hours</h3>
+                    <div class="hours">
+                        <p><span>Mon-Tue</span> Closed</p>
+                        <p><span>Wed-Sun</span> 4:30-11pm</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <h3>contact</h3>
+                    <a href="tel:+555-555-5555">(555) 555-5555</a>
+                    <a href="mailto:info@thailoveyou.com"
+                        >info@thailoveyou.com</a
+                    >
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
