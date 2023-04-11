@@ -471,6 +471,7 @@ section#kitchen {
 
 #kitchen .container h1 {
     font-size: 4em;
+    margin: 0;
 }
 
 #chefs .container {
