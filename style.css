@@ -112,22 +112,23 @@ section {
 header {
     position: relative;
     background-color: black;
+    padding: 0em var(--padding);
     width: 100%;
-    height: 100vh;
-    height: 100svh;
+    height: 60vh;
+    height: 60svh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0em var(--padding);
     z-index: 0;
 }
 
-#reserve-header,
-#menu-header {
-    height: 60vh;
+.full-header {
+    height: 100vh;
+    height: 100svh;
 }
 
-#reserve-header img {
+#reserve-header img,
+#about-header img {
     filter: brightness(50%);
 }
 
@@ -145,6 +146,8 @@ header .container {
     max-width: var(--max-width);
     z-index: 2;
     color: white;
+    width: 100%;
+    max-width: var(--max-width);
     text-align: center;
 }
 
@@ -184,6 +187,7 @@ section .container {
 
 .image-back * {
     color: white;
+    z-index: 2;
 }
 
 .image-back p {
@@ -191,22 +195,32 @@ section .container {
 }
 
 #reserve {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 70vh;
+
+    background-image: url('assets/restaurant.jpg');
 }
 
-#reserve img {
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+}
+
+.parallax::before {
+    z-index: 1;
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    filter: brightness(50%);
-    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 #reserve .container {
@@ -214,6 +228,7 @@ section .container {
     display: flex;
     flex-direction: column;
     gap: 2em;
+    z-index: 2;
 }
 
 #reserve h1 {
@@ -238,6 +253,7 @@ section .container {
 }
 
 .dark-green {
+    background-color: transparent;
     color: #142024;
     border: 2px solid #142024;
 }
@@ -376,6 +392,7 @@ footer .hours p {
 
 #menu-section .item {
     display: grid;
+    width: 100%;
     grid-template-columns: 1fr min-content;
     grid-template-rows: max-content 1fr;
     row-gap: 1em;
@@ -405,13 +422,244 @@ footer .hours p {
     grid-column: 1 / span 1;
 }
 
-fieldset {
-    border: none;
+#about .container img {
+    grid-area: 1 / 1 / 2/ 2;
+    align-self: center;
+    justify-self: center;
+    display: block;
+    border-radius: 50%;
+    width: 80%;
+    rotate: 120deg;
+    -webkit-box-shadow: -3px -19px 18px -8px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: -3px -19px 18px -8px rgba(0, 0, 0, 0.28);
+    box-shadow: -3px -19px 18px -8px rgba(0, 0, 0, 0.28);
 }
 
-@media (max-width: 900px) {
-    #menu .container {
-        flex-direction: column;
+#about .container {
+    max-width: var(--max-width);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+}
+
+#about .text {
+    max-width: 600px;
+    grid-column: 2/-1;
+    align-self: center;
+}
+
+#about .text > * {
+    text-align: left;
+}
+
+section#kitchen {
+    height: 60vh;
+    background-image: url('assets/kitchen.jpg');
+}
+
+#kitchen.parallax {
+    z-index: 0;
+}
+
+#kitchen .container {
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#kitchen .container h1 {
+    font-size: 4em;
+}
+
+#chefs .container {
+    max-width: var(--max-width);
+    display: flex;
+    gap: 2em;
+    justify-content: space-evenly;
+}
+
+#chefs .container h2 {
+    text-transform: uppercase;
+}
+
+#chefs .container p {
+    text-align: left;
+}
+
+#chefs .container .title {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#chefs .container .about {
+    margin-top: 1em;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        'name name' 'email number'
+        'special special' 'date date'
+        'party party'
+        'submit submit';
+    gap: 1em;
+}
+
+form #name {
+    grid-area: name;
+    padding: O;
+}
+
+fieldset {
+    grid-column: 1 / span 2;
+    border: none;
+    margin: 0.75em 0;
+}
+
+legend {
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    width: 100%;
+    color: #142024;
+}
+
+.required legend::after {
+    content: ' *';
+    color: red;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    color: #444;
+    font-size: 1em;
+}
+
+fieldset input {
+    width: 100%;
+}
+
+fieldset div {
+    display: grid;
+    gap: 1em;
+}
+
+fieldset#name div {
+    grid-template-columns: 1fr 1fr;
+}
+
+fieldset#time-section div {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: 1px solid #dfdfdf;
+}
+
+input,
+select,
+textarea {
+    border: 1px solid #d5d5d5;
+    display: block;
+    padding: 0.75em;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #d5d5d5;
+    font-size: 1em;
+    width: 100%;
+}
+
+fieldset#party select,
+form > input {
+    width: unset;
+}
+
+textarea {
+    width: 100%;
+    resize: vertical;
+    grid-column: 1/-1;
+    font-family: 'Inter', sans-serif;
+    padding: 0.75em;
+    height: 100px;
+}
+
+fieldset#time-section {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+fieldset#email {
+    grid-area: email;
+}
+
+fieldset#phone-num {
+    grid-area: number;
+}
+
+fieldset#party {
+    grid-area: party;
+}
+
+form > input {
+    grid-area: submit;
+    justify-self: center;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+@media (max-width: 370px) {
+    #menu-section .desc {
+        grid-column: 1 / span 2;
+    }
+}
+
+@media (max-width: 400px) {
+    #reserve-header h1 {
+        font-size: 3em;
+    }
+
+    #reserve-header p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 500px) {
+    :root {
+        --padding: 1.5rem;
+    }
+
+    header {
+        padding: 0 1.5rem;
+    }
+
+    header {
+        font-size: 0.8em;
+    }
+
+    #menu-section .items {
+        grid-template-columns: 1fr;
+    }
+
+    footer .container {
+        grid-template-columns: 1fr;
+    }
+
+    fieldset#name div {
+        grid-template-columns: 1fr;
+    }
+
+    fieldset#name div label {
+        flex-direction: column-reverse;
     }
 }
 
@@ -431,42 +679,65 @@ fieldset {
     section h1 {
         font-size: 2em;
     }
+
+    .parallax {
+        background-attachment: scroll;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            'name name'
+            'email email'
+            'number number'
+            'special special'
+            'date date'
+            'party party'
+            'submit submit';
+        gap: 1em;
+    }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 900px) {
+    #menu .container, #chefs .container {
+        flex-direction: column;
+    }
+
+    #about .container {
+        grid-template-columns: 1fr;
+        grid-auto-rows: max-content;
+    }
+
+    #about .container img {
+        grid-area: 2 / 1 / span 1 / -1;
+        width: 50%;
+    }
+
+    #about .text {
+        justify-self: center;
+        grid-area: 1 / 1 / span 1 / span 1;
+    }
+
+    #about .text > * {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1800px) {
     :root {
-        --padding: 1.5em;
+        --max-width: 1500px;
     }
 
-    header {
-        padding: 0 1.5em;
-    }
-
-    header {
-        font-size: 0.65em;
+    body {
+        font-size: 20px;
     }
 
     #menu-section .items {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    footer .container {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 400px) {
-    #reserve-header {
-        font-size: 0.5em;
-    }
-
-    #reserve-header p {
-        font-size: 0.7rem;
-    }
-}
-
-@media (max-width: 370px) {
-    #menu-section .desc {
-        grid-column: 1 / span 2;
+    #reserve-form .container {
+        max-width: 1000px;
     }
 }

@@ -3,11 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
-        />
-        <title>ThaiLoveU</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>About | ThaiLoveU</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -21,16 +18,16 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <nav>
+        <nav class="dark">
             <div class="container">
-                <a class="logo" href="#"> ThaiLoveU </a>
+                <a class="logo" href="index.html"> ThaiLoveU </a>
                 <ul>
-                    <li class="nav-link active"><a href="#">Home</a></li>
+                    <li class="nav-link"><a href="index.html">Home</a></li>
                     <li class="nav-link"><a href="menu.html">Menu</a></li>
                     <li class="nav-link">
                         <a href="reserve.html">Reservation</a>
                     </li>
-                    <li class="nav-link"><a href="about.html">About</a></li>
+                    <li class="nav-link active"><a href="#">About</a></li>
                     <li><a class="button" href="#">Order</a></li>
                     <li class="icon">
                         <a href="#">
@@ -48,78 +45,72 @@
                 </ul>
             </div>
         </nav>
-
-        <header class="full-header">
-            <img src="assets/plate.jpg" alt="picture inside the restaurant" />
+        <header id="about-header">
+            <img src="assets/tiles.jpg" alt="tiles" />
             <div class="container">
-                <h1>Love at First Bite</h1>
-                <p>Where Love and Flavor Come Together in Perfect Harmony.</p>
+                <h1>About Us</h1>
+                <p>
+                    Bringing the flavors of Thailand to the heart of New York
+                    City - one dish at a time.
+                </p>
             </div>
         </header>
-
-        <section id="destination">
+        <section id="about">
             <div class="container">
-                <h1>In New York City</h1>
-                <p>
-                    Located in the heart of New York City, ThaiLoveU is the
-                    perfect destination for those looking for authentic Thai
-                    cuisine. Our restaurant is easily accessible by public
-                    transportation and is situated in a bustling neighborhood,
-                    making it the ideal spot for a quick lunch or a leisurely
-                    dinner. Whether you're a local or just visiting the city, we
-                    invite you to come and experience the flavors of Thailand at
-                    ThaiLoveU.
-                </p>
+                <div class="text">
+                    <h1>from the start</h1>
+                    <p>
+                        ThaiLoveU is a family-owned restaurant in the heart of
+                        NYC. Our founder Kanya, from Thailand, opened the
+                        restaurant to bring authentic Thai flavors to the city
+                        with a warm and welcoming atmosphere. Come experience
+                        the taste of Thailand at ThaiLoveU, where every dish is
+                        prepared with the freshest ingredients and served with
+                        love.
+                    </p>
+                </div>
+                <img src="assets/cut-out-plate.jpg" alt="thai food" />
             </div>
         </section>
-
-        <section id="reserve" class="parallax">
-            <div class="image-back container">
-                <h1>Eat Together</h1>
-                <p>
-                    Our dishes are made with only the freshest ingredients,
-                    ensuring a flavorful and unforgettable dining experience.
-                </p>
-                <a class="button white-border" href="reserve.html"
-                    >Make a Reservation</a
-                >
+        <section id="kitchen" class="parallax">
+            <div class="container image-back">
+                <h1>the kitchen</h1>
             </div>
         </section>
-        <section id="menu">
+        <section id="chefs">
             <div class="container">
-                <div class="card">
-                    <img src="assets/thai-food-1.jpg" alt="thai food" />
-                    <h3>crafted in the kitchen</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Doloremque, animi minus, nihil temporibus soluta
-                        doloribus, magni eveniet ab quia perspiciatis libero
-                        optio voluptates sunt enim? Reiciendis dicta possimus
-                        nulla in!
+                <div class="chef-bio">
+                    <h2>Suthipong Thongchai</h2>
+                    <p class="title">Head Chef</p>
+                    <p class="about">
+                        With over 20 years of experience in traditional Thai
+                        cuisine, Chef Suthipong brings a wealth of knowledge and
+                        expertise to ThaiLoveU. He oversees the kitchen and
+                        ensures that each dish is prepared to perfection.
                     </p>
                 </div>
-                <div class="card">
-                    <img src="assets/thai-food-2.jpg" alt="thai food" />
-                    <h3>fresh ingredients</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Pariatur, vel! Velit exercitationem tempore sit pariatur
-                        aut quo modi nisi? Veritatis vitae magni at iure!
-                        Nesciunt iusto quae temporibus perspiciatis suscipit!
+                <div class="chef-bio">
+                    <h2>Nisa Charoenpap</h2>
+                    <p class="title">Sous Chef</p>
+                    <p class="about">
+                        Chef Nisa is a rising star in the culinary world, having
+                        trained under some of the top chefs in Thailand. She
+                        assists Chef Suthipong in the kitchen and is responsible
+                        for creating new and exciting dishes for our customers
+                        to enjoy.
                     </p>
                 </div>
-                <div class="card">
-                    <img src="assets/thai-food-3.jpg" alt="thai food" />
-                    <h3>renowned chef</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Pariatur repellendus eum, laudantium, laboriosam animi
-                        consequatur aut commodi eligendi sunt et dolorum placeat
-                        eos? Debitis minus delectus non, modi a vel.
+                <div class="chef-bio">
+                    <h2>Chaiya Wongnai</h2>
+                    <p class="title">Pastry Chef</p>
+                    <p class="about">
+                        No meal is complete without a sweet ending, and that's
+                        where Chef Chai comes in. With a passion for creating
+                        unique and delicious desserts, Chef Chai brings a
+                        creative flair to ThaiLoveU's dessert menu.
                     </p>
                 </div>
             </div>
-            <a href="menu.html" class="button dark-green">View Menu</a>
         </section>
         <footer>
             <div class="container">

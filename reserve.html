@@ -25,7 +25,7 @@
                     <li class="nav-link"><a href="index.html">Home</a></li>
                     <li class="nav-link"><a href="menu.html">Menu</a></li>
                     <li class="nav-link active"><a href="#">Reservation</a></li>
-                    <li class="nav-link"><a href="#">About</a></li>
+                    <li class="nav-link"><a href="about.html">About</a></li>
                     <li><a class="button" href="#">Order</a></li>
                     <li class="icon">
                         <a href="#">
@@ -45,7 +45,7 @@
         </nav>
         <header id="reserve-header">
             <img
-                src="assets/bright-restuarant.jpg"
+                src="assets/bright-restaurant.jpg"
                 alt="picture inside the restaurant"
             />
             <div class="container">
@@ -60,37 +60,132 @@
             <div class="container">
                 <h1>Reserve a Table</h1>
                 <form>
-                    <fieldset>
-                        <legend>Name *</legend>
-                        <label for="first-name">
-                            <input
-                                type="text"
-                                id="first-name"
-                                autocomplete="given-name"
-                            />
-                            First Name
-                        </label>
-                        <label for="last-name">
-                            <input
-                                type="text"
-                                id="last-name"
-                                autocomplete="family-name"
-                            />
-                            Last Name
-                        </label>
+                    <fieldset id="name" class="required">
+                        <legend>Name</legend>
+                        <div>
+                            <label for="first-name">
+                                <input
+                                    type="text"
+                                    id="first-name"
+                                    autocomplete="given-name"
+                                />
+                                First Name
+                            </label>
+                            <label for="last-name">
+                                <input
+                                    type="text"
+                                    id="last-name"
+                                    autocomplete="family-name"
+                                />
+                                Last Name
+                            </label>
+                        </div>
                     </fieldset>
-                    <fieldset>
-                        <legend>Email *</legend>
+                    <fieldset id="email" class="required">
+                        <legend>Email</legend>
                         <input type="email" autocomplete="email" />
                     </fieldset>
-                    <fieldset>
-                        <legend>Phone Number *</legend>
+                    <fieldset id="phone-num" class="required">
+                        <legend>Phone Number</legend>
                         <input type="tel" autocomplete="tel" />
                     </fieldset>
-                    <fieldset>
+                    <fieldset id="special-req">
                         <legend>Special Requests</legend>
                         <textarea></textarea>
                     </fieldset>
+                    <fieldset id="time-section" class="required">
+                        <legend>Date</legend>
+                        <div>
+                            <label for="month">
+                                <select>
+                                    <option>January</option>
+                                    <option>February</option>
+                                    <option>March</option>
+                                    <option>April</option>
+                                    <option>May</option>
+                                    <option>June</option>
+                                    <option>July</option>
+                                    <option>August</option>
+                                    <option>September</option>
+                                    <option>October</option>
+                                    <option>November</option>
+                                    <option>December</option>
+                                </select>
+                                Month
+                            </label>
+                            <label for="day">
+                                <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                    <option>13</option>
+                                    <option>14</option>
+                                    <option>15</option>
+                                    <option>16</option>
+                                    <option>17</option>
+                                    <option>18</option>
+                                    <option>19</option>
+                                    <option>20</option>
+                                    <option>21</option>
+                                    <option>22</option>
+                                    <option>23</option>
+                                    <option>24</option>
+                                    <option>25</option>
+                                    <option>26</option>
+                                    <option>27</option>
+                                    <option>28</option>
+                                    <option>30</option>
+                                    <option>31</option>
+                                </select>
+                                DD
+                            </label>
+                            <label for="time">
+                                <select id="time">
+                                    <option>4:30pm</option>
+                                    <option>5:00pm</option>
+                                    <option>5:30pm</option>
+                                    <option>6:00pm</option>
+                                    <option>6:30pm</option>
+                                    <option>7:00pm</option>
+                                    <option>7:30pm</option>
+                                    <option>8:00pm</option>
+                                    <option>8:30pm</option>
+                                    <option>9:00pm</option>
+                                    <option>9:30pm</option>
+                                    <option>10:00pm</option>
+                                </select>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset id="party" class="required">
+                        <legend>Party Size</legend>
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                        </select>
+                    </fieldset>
+                    <input
+                        type="submit"
+                        value="Submit"
+                        class="button dark-green"
+                    />
                 </form>
             </div>
         </section>
