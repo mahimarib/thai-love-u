@@ -18,29 +18,61 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <nav>
+        <nav class="main-nav">
             <div class="container">
                 <a class="logo" href="index.html"> ThaiLoveU </a>
+                <div class="nav-right">
+                    <ul>
+                        <li class="nav-link"><a href="index.html">Home</a></li>
+                        <li class="nav-link"><a href="menu.html">Menu</a></li>
+                        <li class="nav-link active">
+                            <a href="#">Reservation</a>
+                        </li>
+                        <li class="nav-link"><a href="about.html">About</a></li>
+                        <li><a class="button" href="#">Order</a></li>
+                        <li class="icon">
+                            <a href="#">
+                                <i
+                                    class="fa fa-instagram"
+                                    aria-hidden="true"
+                                ></i>
+                            </a>
+                        </li>
+                        <li class="icon">
+                            <a href="#">
+                                <i class="fa fa-yelp" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="hamburger">
+                        <div class="bar"></div>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <nav class="mobile">
+            <div class="container">
                 <ul>
-                    <li class="nav-link"><a href="index.html">Home</a></li>
-                    <li class="nav-link"><a href="menu.html">Menu</a></li>
-                    <li class="nav-link active"><a href="#">Reservation</a></li>
+                    <li class="nav-link">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-link active">
+                        <a href="reserve.html">Reservation</a>
+                    </li>
                     <li class="nav-link"><a href="about.html">About</a></li>
                     <li><a class="button" href="#">Order</a></li>
-                    <li class="icon">
-                        <a href="#">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li class="icon">
-                        <a href="#">
-                            <i class="fa fa-yelp" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li class="menu-button">
-                        <img src="assets/hamburger.svg" alt="menu icon" />
-                    </li>
                 </ul>
+                <div class="socials">
+                    <a class="icon" href="#">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a class="icon" href="#">
+                        <i class="fa fa-yelp" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
         </nav>
         <header id="reserve-header">
@@ -192,7 +224,7 @@
         <footer>
             <div class="container">
                 <div class="col">
-                    <a href="#" class="logo">
+                    <a href="index.html" class="logo">
                         thailoveyou
                         <i class="fa fa-heart" aria-hidden="true"></i>
                     </a>
@@ -236,5 +268,6 @@
                 </div>
             </div>
         </footer>
+        <script src="script.js"></script>
     </body>
 </html>
