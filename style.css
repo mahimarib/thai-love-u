@@ -539,7 +539,7 @@ footer .hours p {
     -webkit-box-shadow: -3px -19px 18px -8px rgba(0, 0, 0, 0.28);
     -moz-box-shadow: -3px -19px 18px -8px rgba(0, 0, 0, 0.28);
     box-shadow: -3px -19px 18px -8px rgba(0, 0, 0, 0.28);
-    animation: spin 20s linear infinite;
+    animation: spin 60s linear infinite;
 }
 
 @keyframes spin {
