@@ -724,6 +724,7 @@ fieldset#party {
 }
 
 form > input {
+    -webkit-appearance: none;
     grid-area: submit;
     justify-self: center;
     font-size: 1em;
