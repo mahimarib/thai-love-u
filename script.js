@@ -1,5 +1,5 @@
 window.onload = function () {
-    
+    const navBar = document.querySelector('.main-nav');
 
     const menu_btn = document.querySelector('.hamburger');
     const mobile_menu = document.querySelector('.mobile');
