@@ -100,6 +100,7 @@
                                     type="text"
                                     id="first-name"
                                     autocomplete="given-name"
+                                    required
                                 />
                                 First Name
                             </label>
@@ -108,6 +109,7 @@
                                     type="text"
                                     id="last-name"
                                     autocomplete="family-name"
+                                    required
                                 />
                                 Last Name
                             </label>
@@ -115,11 +117,11 @@
                     </fieldset>
                     <fieldset id="email" class="required">
                         <legend>Email</legend>
-                        <input type="email" autocomplete="email" />
+                        <input type="email" autocomplete="email" required />
                     </fieldset>
                     <fieldset id="phone-num" class="required">
                         <legend>Phone Number</legend>
-                        <input type="tel" autocomplete="tel" />
+                        <input type="tel" autocomplete="tel" required />
                     </fieldset>
                     <fieldset id="special-req">
                         <legend>Special Requests</legend>
@@ -129,7 +131,7 @@
                         <legend>Date</legend>
                         <div>
                             <label for="month">
-                                <select id="month">
+                                <select id="month" required>
                                     <option>January</option>
                                     <option>February</option>
                                     <option>March</option>
@@ -146,7 +148,7 @@
                                 Month
                             </label>
                             <label for="day">
-                                <select id="day">
+                                <select id="day" required>
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -181,7 +183,7 @@
                                 DD
                             </label>
                             <label for="time">
-                                <select id="time">
+                                <select id="time" required>
                                     <option>4:30pm</option>
                                     <option>5:00pm</option>
                                     <option>5:30pm</option>
@@ -200,7 +202,7 @@
                     </fieldset>
                     <fieldset id="party" class="required">
                         <legend>Party Size</legend>
-                        <select>
+                        <select required>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
